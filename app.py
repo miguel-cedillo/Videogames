@@ -5,13 +5,14 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from scipy import stats as st
+import streamlit as stream
 
 
 # In[2]:
 
 
 # extraer el dataset y revisar los datos
-videogames_df = pd.read_csv('/datasets/games.csv')
+videogames_df = pd.read_csv('dataset/games.csv')
 videogames_df.info()
 print(videogames_df.duplicated().sum())
 
@@ -618,7 +619,7 @@ def perfil_regional(df, columna_interes, top_n=5):
 
 top_plataformas = perfil_regional(videogames_release_2010, 'platform', top_n=5)
 print("=== TOP 5 PLATAFORMAS POR REGIÓN ===")
-display(top_plataformas)
+stream.dataframe(top_plataformas)
 
 
 # Vamos a módificar la tabla anterior para poder hacer una gráfica de barras.
@@ -671,7 +672,7 @@ plt.show()
 #top_5_generos
 top_generos = perfil_regional(videogames_release_2010, 'genre', top_n=5)
 print("=== TOP 5 GÉNEROS POR REGIÓN ===")
-display(top_generos)
+stream.dataframe(top_generos)
 
 
 # Vamos a restablecer la tabla anterior para poder elaborar una gráfica de barras
@@ -739,7 +740,7 @@ esrb_cuota = esrb_ventas.div(esrb_ventas.sum(axis=0), axis=1) * 100
 esrb_cuota.columns = list(regiones.values())
 
 print("=== DISTRIBUCIÓN DE VENTAS POR CLASIFICACIÓN ESRB (%) ===")
-display(esrb_cuota.round(2))
+stream.dataframe(esrb_cuota.round(2))
 
 
 # Vamos a modificar esta tabla para poder graficarla
