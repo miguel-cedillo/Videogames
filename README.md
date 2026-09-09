@@ -1,49 +1,117 @@
-# 🎮 GameSales Analytics | Dashboard Interactivo del Mercado de Videojuegos 🕹️
+# 🎮 Video Game Sales Analytics Dashboard
 
-> *"Los datos no solo cuentan qué videojuegos se vendieron, sino cómo evoluciona la cultura y la industria del entretenimiento digital."*
+¡Bienvenido al repositorio del **Dashboard Interactivo de Análisis del Mercado de Videojuegos**! Este proyecto transforma datos históricos de ventas en información estratégica mediante el desarrollo de una aplicación web interactiva.
 
----
+El objetivo principal es identificar patrones de consumo, analizar la longevidad de las plataformas comerciales, medir la correlación entre la crítica y las ventas, y realizar validaciones estadísticas rigurosas para respaldar decisiones de negocio en la industria del entretenimiento digital.
 
-## 📌 Descripción del Proyecto
-
-**GameSales Analytics** es una aplicación web interactiva desarrollada para explorar, analizar y visualizar patrones de ventas globales en la industria de los videojuegos. Utilizando datasets históricos del mercado, esta herramienta permite a analistas, desarrolladores y entusiastas descubrir tendencias de consumo por **género, plataforma, región y época**.
-
-Esta solución fue desarrollada enfocándose en una experiencia de usuario fluida, ofreciendo filtros dinámicos e indicadores clave (KPIs) en tiempo real sin necesidad de conocimientos previos en código para el usuario final.
+> 💡 **Nota de valor:** El proyecto no solo visualiza datos, sino que automatiza la limpieza del dataset, la estandarización de variables y la ejecución de **pruebas de hipótesis t-Student** en tiempo real.
 
 ---
 
-## ✨ Características Principales
+## 🚀 Características Principales
 
-- 📈 **Visualizaciones Dinámicas**: Gráficos interactivos de dispersión, barras, líneas y diagramas de caja adaptables al instante con Plotly Express.
-- 🌍 **Desglose Regional**: Comparativas detalladas del volumen de ventas entre Norteamérica (NA), Europa (EU), Japón (JP) y el resto del mundo.
-- 🔍 **Filtros Personalizados**: Segmentación por año de lanzamiento, consola y categoría de juego.
-- 🧪 **Pruebas de Hipótesis**: Evaluación estadística de diferencias en calificaciones de usuarios según la plataforma.
-- ⚡ **Alto Rendimiento**: Carga eficiente y procesamiento acelerado de datos mediante almacenamiento en caché.
+* 📋 **Vista Previa & KPIs:** Métricas de alto nivel (total de ventas, volumen de juegos, catálogo de plataformas) y exploración directa de los datos origen.
+* 📈 **Evolución Histórica:** Análisis temporal de lanzamientos para identificar la era dorada del formato físico y tendencias de producción.
+* 🎯 **Ciclo de Vida & Géneros:** Evaluación comparativa del ciclo de vida útil de consolas mediante líneas de tiempo interactivas, distribuciones (*boxplots*) y géneros líderes.
+* ⭐ **Análisis de Correlación:** Estudio de dispersión con regresión OLS entre las calificaciones de la crítica (*Critic Score*) y el desempeño comercial.
+* 🌍 **Perfil de Mercado Regional:** Segmentación geográfica de hábitos de consumo (Norteamérica, Europa, Japón y Resto del Mundo).
+* 🧪 **Pruebas de Hipótesis:** Módulo estadístico automatizado con **Prueba de Levene** (igualdad de varianzas) y **Prueba T de Student** de muestras independientes.
 
 ---
 
 ## 🛠️ Tecnologías Utilizadas
 
-Esta aplicación aprovecha el ecosistema moderno de ciencia de datos en Python para garantizar rendimiento y flexibilidad visual:
+Las herramientas seleccionadas garantizan un procesamiento de datos eficiente, análisis estadístico riguroso y una experiencia de usuario fluida:
 
-| Tecnología | Rol en el Proyecto |
-| :--- | :--- |
-| ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) | **Lenguaje principal** para manipulación de datos y lógica de negocio. |
-| ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white) | **Framework de desarrollo web** para la interfaz interactiva. |
-| ![Plotly](https://img.shields.io/badge/Plotly-3F4F75?style=for-the-badge&logo=plotly&logoColor=white) | **Librería de gráficos interactivos** para la representación visual. |
-| ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white) | **Procesamiento de datos** y limpieza de datasets. |
-| ![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white) | **Cálculos estadísticos** y pruebas de hipótesis. |
+* **Lenguaje:** ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+* **Framework Web:** ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+* **Manipulación de Datos:** ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white) & ![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
+* **Visualización Interactiva:** ![Plotly](https://img.shields.io/badge/Plotly-%233F4F75.svg?style=for-the-badge&logo=plotly&logoColor=white)
+* **Análisis Estadístico:** ![SciPy](https://img.shields.io/badge/SciPy-%230C55A5.svg?style=for-the-badge&logo=scipy&logoColor=white)
 
 ---
 
-## 🚀 Instrucciones de Instalación Local
+## ⚙️ Instalación y Configuración Local
 
-Sigue estos sencillos pasos para clonar y ejecutar la aplicación en tu máquina local:
+Sigue estos pasos paso a paso para clonar el repositorio, configurar tu entorno virtual y ejecutar la aplicación en tu máquina local.
 
-### 1. Clonar el Repositorio
+### Prerrequisitos
 
-Abre tu terminal o consola de comandos y ejecuta:
+* Tener instalado **Python 3.8** o superior.
+* Gestor de paquetes `pip` actualizado.
 
-```bash
-git clone [https://github.com/tu-usuario/gamesales-analytics.git](https://github.com/tu-usuario/gamesales-analytics.git)
-cd gamesales-analytics
+### Pasos de Ejecución
+
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/tu-usuario/video-games-analytics-dashboard.git
+   cd video-games-analytics-dashboard
+   ```
+
+2. **Crear y activar un entorno virtual (recomendado):**
+   * En Linux/macOS:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+   * En Windows:
+     ```bash
+     python -m venv venv
+     venv\Scripts\activate
+     ```
+
+3. **Instalar dependencias requeridas:**
+   Asegúrate de que tus librerías estén listadas en el archivo `requirements.txt` y ejecuta:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Estructura de archivos esperada:**
+   Verifica que la estructura de tu proyecto luzca de la siguiente forma antes de la ejecución:
+   ```text
+   ├── dataset/
+   │   └── games.csv
+   ├── app.py
+   ├── requirements.txt
+   └── README.md
+   ```
+
+5. **Iniciar la aplicación con Streamlit:**
+   ```bash
+   streamlit run app.py
+   ```
+
+6. **¡Listo!** La aplicación se abrirá automáticamente en tu navegador web predeterminado en la dirección local: `http://localhost:8501`.
+
+---
+
+## 📂 Estructura del Dataset
+
+El panel procesa un dataset de la industria de videojuegos con las siguientes variables clave:
+
+| Columna | Descripción |
+| :--- | :--- |
+| `name` | Nombre del videojuego |
+| `platform` | Consola o plataforma de lanzamiento |
+| `year_of_release` | Año de publicación |
+| `genre` | Categoría o género principal |
+| `na_sales`, `eu_sales`, `jp_sales`, `other_sales` | Ventas en millones de USD por región |
+| `critic_score` | Puntuación otorgada por la crítica (escala 0-100) |
+| `user_score` | Puntuación asignada por los usuarios (escala 0-10) |
+| `rating` | Clasificación de contenido por edad (ESRB) |
+
+---
+
+## 🤝 Contribuciones
+
+Las contribuciones son las que hacen de la comunidad de código abierto un lugar increíble para aprender, inspirar y crear. Cualquier contribución que hagas será **muy apreciada**.
+
+1. Haz un *Fork* del proyecto.
+2. Crea tu *Feature Branch* (`git checkout -b feature/NuevaCaracteristica`).
+3. Haz *Commit* de tus cambios (`git commit -m 'Añadir NuevaCaracteristica'`).
+4. Haz *Push* a la rama (`git push origin feature/NuevaCaracteristica`).
+5. Abre un *Pull Request*.
+
+---
+
+Desarrollado con pasión para la ciencia de datos y la analítica del entretenimiento digital. 🕹️✨
